@@ -1,0 +1,5 @@
+1.环境配置
+参看：https://www.cnblogs.com/saryli/p/9729591.html
+1).erlang 安装
+2).rabbitmq 安装
+http://localhost:15672/ ==> 目录（默认，用户名/密码 都是 guest）
