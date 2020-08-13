@@ -15,6 +15,6 @@
               queues="spittleAlertQueue" />
     </listener-container>
 
-  <beans:bean id="spittleListener" class="spittr.alerts.SpittleAlertHandler" />
+  <beans:bean id="spittleListener" class="fc.handler.SpittleAlertHandler" />
 
 </beans:beans>

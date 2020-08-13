@@ -6,22 +6,17 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/rabbit http://www.springframework.org/schema/rabbit/spring-rabbit.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-
-  <!--<start id="amqp_connectionFactory_bean"/>--> 
   <connection-factory id="connectionFactory" />
-  <!--<end id="amqp_connectionFactory_bean"/>--> 
-	
-	
-  <!--<start id="amqp_admin_and_queue_beans"/>--> 
-<admin connection-factory="connectionFactory"/><queue id="spittleAlertQueue" name="spittle.alerts" />
-  <!--<end id="amqp_admin_and_queue_beans"/>--> 
-	
+  
+
+<admin connection-factory="connectionFactory"/>
+<queue id="spittleAlertQueue" name="spittle.alerts" />
+
   <fanout-exchange name="spittle.alert.exchange">
     <bindings>
       <binding queue="spittle.alerts" />
     </bindings>
   </fanout-exchange>
-
 
 
   <connection-factory id="connectionFactory" 
